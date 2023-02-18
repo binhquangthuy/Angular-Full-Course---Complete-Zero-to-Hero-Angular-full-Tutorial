@@ -1,2 +1,5 @@
 <div [innerHTML]="example"></div>
-<label>sssssssssss</label>
+<label>{{ user.name }}</label>
+<p>{{ user.age }}</p>
+<div *ngIf="user.age >= 18; else NotShow">Bạn đã đủ tuổi xem nội dung :v</div>
+<ng-template #NotShow> Trẻ con biết gì mà xem =)) </ng-template>
